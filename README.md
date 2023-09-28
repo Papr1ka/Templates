@@ -10,8 +10,9 @@
 ## Структура
 - templates/ - готовые шаблоны отчётов о практических работах
 - base.docx - шаблон файла .docx со всеми стилями и титульным листом
-- main.md - файл, использующийся по умолчанию для генерации шаблона
 - start.bat - команда запуска для windows
+- build.ps1 - скрипт на powershell, доделывающий работы за pandoc
+- linebreaks.lua - фильтр для pandoc
 
 ## Использование
 1. Клонирование репозитория
@@ -19,11 +20,10 @@
 	git clone https://github.com/Papr1ka/Templates
 
 2. Редактирование нужного файла в каталоге templates
-3. Загрузка в папку необходимых картинок, указанных в шаблоне
-4. Генерация отчёта (В примере - из шаблона для 1-й практической работы)
-
-	pandoc templates/practice1.md --reference-doc=base.docx -f markdown --standalone=true -t docx -o output.docx --filter pandoc-crossref --citeproc
-5. Дальнейшее распоряжение отчётом (output.docx)
+3. Загрузка в корневую папек необходимых картинок, указанных в шаблоне (Templates/), а не (Templates/templates)
+4. Изменение start.bat с указанием нужного номера шаблона (practice[1-8])
+5. Запуск start.bat
+6. Дальнейшее распоряжение отчётом (output.docx и output.pdf)
 
 ## Правила оформления отчёта
 
