@@ -11,4 +11,4 @@
 > ...
 > -->
 
-[Готовый шаблон] - (templates/practice1.md)
+[Готовый шаблон](templates/practice1.md)
