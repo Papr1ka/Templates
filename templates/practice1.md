@@ -1,9 +1,16 @@
 ---
 figureTitle: Рисунок
 tableTitle: Таблица
-listingTitle: Листинг
+tableEqns: true
 titleDelim: "&nbsp;–"
----
+link-citations: true
+linkReferences: true
+chapters: true
+...
+
+# [Содержание]{custom-style="UnnumberedHeadingOneNoTOC"} {.unnumbered}
+
+%TOC%
 
 <!--
 Описание необходимых файлов картинок:
@@ -17,7 +24,7 @@ test7.png - Тестирование работы программы при n = 
 test8.png - Тестирование работы программы при n = 1000 к заданию 6
 -->
 
-
+ 
 # Практическая работа 1
 
 Тема: Поразрядные операции и их применение

@@ -1,3 +1,9 @@
-pandoc templates/practice1.md --reference-doc=base.docx -f markdown --standalone=true -t docx -o output.docx --filter pandoc-crossref --citeproc
+powershell.exe -command .\build.ps1 ^
+-md templates/practice2.md ^
+-template base.docx ^
+-docx output.docx ^
+-pdf output.pdf ^
+-embedfonts ^
+-counters
 
 pause
