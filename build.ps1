@@ -39,7 +39,9 @@ if (-not [string]::IsNullOrEmpty($pdf))
 $tempdocx = [System.IO.Path]::GetTempFilename() + ".docx"
 
 write-host "Executing Pandoc..."
-&$exe $md -o $tempdocx --lua-filter ./linebreaks.lua --filter pandoc-crossref --citeproc --reference-doc $template
+cd ./input
+&$exe $md -o $tempdocx --lua-filter ../linebreaks.lua --filter pandoc-crossref --citeproc --reference-doc $template
+cd ../
 
 if ($LASTEXITCODE -ne 0)
 {
