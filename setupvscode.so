@@ -1,0 +1,5 @@
+#!/bin/bash
+
+cp -r ./pandoc-docx-snippets ~/.vscode/extensions
+
+echo "Расширение установлено, попробуйте перезапустить vscode, расширение появится в соответствующей вкладке"
