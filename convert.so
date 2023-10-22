@@ -1,0 +1,28 @@
+#!/bin/bash
+echo "Поехали..."
+
+# Путь к исполняемому файлу пандока (если есть в PATH (в терминале написать pandoc -v и будет ответ), то не менять)
+PANDOC_PATH=pandoc
+# Путь к исполняемому файлу фильтра pandoc-crossref (если лежит в той же папке, где и пандок, то не менять)
+PANDOC_CROSSREF_PATH=pandoc-crossref
+# Скрипт работает так: переходит в папку templates и копирует оттуда в папку input файл с названием $TEMPLATE
+TEMPLATE=practice2.md
+# Базовый документ
+REFERENCE=base.docx
+# Название файла в папке output
+OUTPUT=out.docx
+
+mkdir -p ./input
+mkdir -p ./output
+
+cp ./templates/$TEMPLATE ./input
+
+cd ./input
+
+echo $PANDOC_PATH
+
+echo $PANDOC_CROSSREF_PATH
+
+$PANDOC_PATH $TEMPLATE --reference-doc $REFERENCE -o .output/$OUTPUT --filter $PANDOC_CROSSREF_PATH --citeproc
+
+echo "Готово!"
